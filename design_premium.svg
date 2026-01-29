@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="450" height="450" viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Tibber Cyan Gradient -->
+    <linearGradient id="tibberCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5EE5F5"/>
+      <stop offset="50%" style="stop-color:#1ED0E7"/>
+      <stop offset="100%" style="stop-color:#0DB4CA"/>
+    </linearGradient>
+
+    <!-- Tibber Purple Gradient -->
+    <linearGradient id="tibberPurple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8E5FF"/>
+      <stop offset="40%" style="stop-color:#C86DFF"/>
+      <stop offset="100%" style="stop-color:#9B4FCC"/>
+    </linearGradient>
+
+    <!-- Radial glow for center -->
+    <radialGradient id="centerGlow">
+      <stop offset="0%" style="stop-color:#1ED0E7;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#1ED0E7;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background - Tibber Dark Navy -->
+  <rect width="450" height="450" fill="#16191D"/>
+
+  <!-- Subtle glow in center -->
+  <circle cx="225" cy="225" r="120" fill="url(#centerGlow)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="225" cy="225" r="200" fill="none" stroke="url(#tibberCyan)" stroke-width="0.5" opacity="0.2"/>
+  <circle cx="225" cy="225" r="160" fill="none" stroke="url(#tibberPurple)" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Tibber Lightning Icon - watermark in center -->
+  <g transform="translate(225, 225)" opacity="0.06">
+    <path d="M -25,-50 L 15,-8 L -8,-8 L 25,50 L -15,8 L 8,8 Z" fill="url(#tibberCyan)"/>
+  </g>
+
+  <!-- Hour markers (subtle) -->
+  <circle cx="225" cy="35" r="2" fill="url(#tibberCyan)" opacity="0.5"/>
+  <circle cx="415" cy="225" r="2" fill="url(#tibberCyan)" opacity="0.5"/>
+  <circle cx="225" cy="415" r="2" fill="url(#tibberCyan)" opacity="0.5"/>
+  <circle cx="35" cy="225" r="2" fill="url(#tibberCyan)" opacity="0.5"/>
+
+  <!-- COMPLICATION 1: TIME - Top Center -->
+  <g id="time-top">
+    <rect x="150" y="50" width="150" height="55" rx="10" fill="#090A0B" stroke="url(#tibberCyan)" stroke-width="1.5" opacity="0.9"/>
+    <text x="225" y="87" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">12:34</text>
+  </g>
+
+  <!-- COMPLICATION 2: DATE - Top Right -->
+  <g id="date-top-right" transform="translate(345, 85)">
+    <circle cx="0" cy="0" r="32" fill="#090A0B" stroke="url(#tibberCyan)" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="-8" font-family="Arial, sans-serif" font-size="10" fill="#999999" text-anchor="middle">Mo</text>
+    <text x="0" y="8" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">28</text>
+  </g>
+
+  <!-- COMPLICATION 3: BATTERY - Right -->
+  <g id="battery-right" transform="translate(370, 225)">
+    <rect x="-40" y="-22" width="80" height="44" rx="8" fill="#090A0B" stroke="url(#tibberCyan)" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="7" font-family="Arial, sans-serif" font-size="20" fill="url(#tibberCyan)" text-anchor="middle">85%</text>
+  </g>
+
+  <!-- COMPLICATION 4: STEPS - Bottom Right -->
+  <g id="steps-bottom-right" transform="translate(345, 365)">
+    <circle cx="0" cy="0" r="32" fill="#090A0B" stroke="url(#tibberCyan)" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="-8" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">👣</text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="12" fill="url(#tibberCyan)" text-anchor="middle">8.2k</text>
+  </g>
+
+  <!-- COMPLICATION 5: LIVE POWER USAGE - Bottom Center (PREMIUM HIGHLIGHT!) -->
+  <g id="live-power-bottom">
+    <rect x="80" y="320" width="290" height="85" rx="14" fill="#090A0B" stroke="url(#tibberPurple)" stroke-width="2.5" opacity="0.95"/>
+
+    <!-- Premium badge corner -->
+    <circle cx="350" cy="340" r="10" fill="url(#tibberPurple)"/>
+    <text x="350" y="344" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#16191D" text-anchor="middle">⭐</text>
+
+    <text x="225" y="345" font-family="Arial, sans-serif" font-size="12" fill="#999999" text-anchor="middle">Live-Verbrauch</text>
+    <text x="225" y="378" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="url(#tibberPurple)" text-anchor="middle">2.4 kW</text>
+    <text x="225" y="395" font-family="Arial, sans-serif" font-size="11" fill="#666666" text-anchor="middle">82 ct/Stunde</text>
+  </g>
+
+  <!-- COMPLICATION 6: CURRENT PRICE - Left Bottom -->
+  <g id="price-left-bottom" transform="translate(80, 245)">
+    <rect x="-40" y="-22" width="80" height="44" rx="8" fill="#090A0B" stroke="url(#tibberCyan)" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="-5" font-family="Arial, sans-serif" font-size="9" fill="#999999" text-anchor="middle">Preis</text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="url(#tibberCyan)" text-anchor="middle">34 ct</text>
+  </g>
+
+  <!-- COMPLICATION 7: HEART RATE - Left -->
+  <g id="heartrate-left" transform="translate(80, 165)">
+    <rect x="-40" y="-22" width="80" height="44" rx="8" fill="#090A0B" stroke="url(#tibberCyan)" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="7" font-family="Arial, sans-serif" font-size="18" fill="#FF4466" text-anchor="middle">❤ 72</text>
+  </g>
+
+  <!-- COMPLICATION 8: NOTIFICATIONS - Top Left -->
+  <g id="notifications-top-left" transform="translate(105, 85)">
+    <circle cx="0" cy="0" r="32" fill="#090A0B" stroke="url(#tibberCyan)" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="8" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#tibberCyan)" text-anchor="middle">3</text>
+  </g>
+
+  <!-- COMPLICATION 9: WEATHER - Left Top -->
+  <g id="weather-left-top" transform="translate(80, 105)">
+    <rect x="-40" y="-22" width="80" height="44" rx="8" fill="#090A0B" stroke="url(#tibberCyan)" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="7" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">⛅ 12°</text>
+  </g>
+
+  <!-- Center dot -->
+  <circle cx="225" cy="225" r="5" fill="url(#tibberCyan)" opacity="0.4"/>
+
+  <!-- Premium watermark bottom -->
+  <text x="225" y="438" font-family="Arial, sans-serif" font-size="9" fill="#666666" text-anchor="middle" opacity="0.5">PREMIUM</text>
+</svg>
